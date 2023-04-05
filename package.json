@@ -1,0 +1,24 @@
+{
+  "name": "infraestructura-e-interiores-test",
+  "version": "1.0.0",
+  "description": "prueba de conocimientos para ingresar como desarrollador en esta empresa",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npm run dev --workspaces"
+  },
+  "workspaces": ["./*"],
+  "keywords": [
+    "prueba",
+    "infraestructura",
+    "e",
+    "interiores",
+    "frontend",
+    "backend",
+    "rick",
+    "and",
+    "morty"
+  ],
+  "author": "FM9408",
+  "license": "ISC"
+}
