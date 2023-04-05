@@ -12,8 +12,20 @@ const PRIMARY = {
 }
 
 
+const SECONDARY = {
+    main: colors.lime[500],
+    dark: colors.lime[600],
+    light: colors.lime[400],
+    darker: colors.lime[700],
+    lighter: colors.lime[300],
+    darkest: colors.lime[800],
+    lightest: colors.lime[200],
+    contrastText: colors.common.white
+}
+
 const palette = {
     primary: PRIMARY,
+    secondary: SECONDARY,
     background: {
         default: alpha(colors.common.black, 0.01)
     },

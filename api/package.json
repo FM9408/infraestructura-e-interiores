@@ -6,7 +6,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "start nodemon -L",
-    "start": "node index.js"
+    "start": "node index.js",
+    "build":  "docker build . --tag gcr.io/infraestructura-e-interiores/prueba-tecnica",
+    "push": "docker push gcr.io/infraestructura-e-interiores/prueba-tecnica:latest",
+    "deploy": "npm run push && gcloud run deploy prueba-tecnica --image gcr.io/infraestructura-e-interiores/prueba-tecnica --allow-unauthenticated --add-cloudsql-instances=infraestructura-e-interiores:us-east1:pruebatecnica-infraestructura-e-interiores --memory 512Mi --cpu 1 --port 8080"
+    
   },
   "keywords": [
     "api",

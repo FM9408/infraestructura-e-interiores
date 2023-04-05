@@ -1,4 +1,4 @@
-import { Box, Button, Container, Paper, Stack } from "@mui/material"
+import { Box, Button, Stack } from "@mui/material"
 import React from "react"
 import { LandingPageButtonsVar } from "../../../variables/landingPageButtons"
 import { useNavigate } from "react-router-dom"

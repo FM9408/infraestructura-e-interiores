@@ -1,7 +1,6 @@
 import * as React from 'react';
-import Typography from '@mui/material/Typography';
-import Pagination from '@mui/material/Pagination';
-import Stack from '@mui/material/Stack';
+import { Pagination, Stack } from '@mui/material';
+
 
 export default function NavPagination({currentPage, totalPages, handleChange}) {
     

@@ -6,7 +6,8 @@ const helmet = require('helmet')
 const cors = require('cors')
 const compression = require('compression')
 const mainRouter = require('./routes/index')
-const {NODE_ENV, BASE_URL} = process.env
+const { NODE_ENV, BASE_URL } = process.env
+require('./db')
 
 const server = express()
 
@@ -19,10 +20,16 @@ server.use(cookieParser())
 server.use(cors())
 server.use(morgan('dev'))
 server.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', NODE_ENV === 'production' ? BASE_URL : '*')
-    res.header('Access-Control-Allow-Headers', 'X-Requested-With, Accept, Origin, Content-Type')
-    res.header('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE, OPTIONS')
+    res.header('Access-Control-Allow-Origin', NODE_ENV === 'production' ? BASE_URL : '*') 
     res.header('Access-Control-Allow-Credentials', 'true')
+    res.header(
+        'Access-Control-Allow-Headers',
+        'Origin, X-Requested-With, Content-Type, Accept'
+    )
+    res.header(
+        'Access-Control-Allow-Methods',
+        'GET, POST, OPTIONS, PUT, DELETE'
+    )
     next()
 })
 
